@@ -2,9 +2,8 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-main-content',
-  imports: [],
   templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.css',
+  styleUrls: ['./main-content.component.css'], // 修正: styleUrls に変更
 })
 export class MainContentComponent {
   @Input() title: string = '';
