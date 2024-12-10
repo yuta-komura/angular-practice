@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component'; // HeaderComponent をインポート
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true, // スタンドアロンを有効化
+  imports: [RouterOutlet, HeaderComponent], // HeaderComponent を登録
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  title = 'angular-practice';
-}
+export class AppComponent {}
