@@ -5,10 +5,10 @@ import { MainContentComponent } from './main-content/main-content.component';
 export const routes: Routes = [
   {
     path: '', // ホーム画面
-    component: MainContentComponent, // MainContentComponent を表示
+    component: MainContentComponent, // メインコンテンツ
   },
   {
     path: 'about', // About ページ
-    component: AboutComponent, // AboutComponent を表示
+    component: AboutComponent, // About ページ
   },
 ];
