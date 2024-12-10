@@ -2,4 +2,12 @@
 <app-main-content
   [title]="'メインコンテンツ'"
   [description]="'Angularで楽しく開発'"
-></app-main-content>
+>
+</app-main-content>
+<div>
+  <h1>ユーザーリスト</h1>
+  <ul>
+    <li *ngFor="let user of users">{{ user }}</li>
+  </ul>
+  <button (click)="addUser()">ユーザーを追加</button>
+</div>
