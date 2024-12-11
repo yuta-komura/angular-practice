@@ -1,0 +1,13 @@
+<h1>About Page</h1>
+<p>以下はユーザー一覧です:</p>
+<ul>
+  <li *ngFor="let user of users; let i = index">
+    {{ user.id }}: {{ user.name }}
+    <button (click)="removeUser(i)" style="margin-left: 10px">×</button>
+  </li>
+</ul>
+
+<input #newUser type="text" placeholder="新しいユーザー名" />
+<button (click)="addUser(newUser.value); newUser.value = ''">
+  ユーザーを追加
+</button>

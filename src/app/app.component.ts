@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common'; // CommonModule をインポート
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './header/header.component'; // HeaderComponent をインポート
+import { HeaderComponent } from './components/header/header.component'; // HeaderComponent をインポート
 import { UserService } from './services/user.service';
 
 @Component({
