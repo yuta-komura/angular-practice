@@ -4,11 +4,11 @@ import { MainContentComponent } from './main-content/main-content.component';
 
 export const routes: Routes = [
   {
-    path: '', // ホーム画面
-    component: MainContentComponent, // メインコンテンツ
+    path: '',
+    component: MainContentComponent,
   },
   {
-    path: 'about', // About ページ
-    component: AboutComponent, // About ページ
+    path: 'about',
+    component: AboutComponent,
   },
 ];
