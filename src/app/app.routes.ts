@@ -6,6 +6,10 @@ export const routes: Routes = [
   {
     path: '',
     component: MainContentComponent,
+    data: {
+      title: 'メインコンテンツ',
+      description: 'Angularで楽しく開発',
+    },
   },
   {
     path: 'about',

@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true, // スタンドアロンを有効化
   imports: [],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
 })
-export class HeaderComponent {
-
-}
+export class HeaderComponent {}

@@ -1,0 +1,34 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "always",
+        "source.fixAll.eslint": "always",
+        "source.fixAll.stylelint": "always"
+    },
+    "prettier.prettierPath": "./node_modules/prettier",
+    "eslint.nodePath": "./node_modules",
+    "stylelint.stylelintPath": "./node_modules/stylelint",
+    "files.eol": "\n",
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "javascript.preferences.importModuleSpecifier": "relative",
+    "eslint.validate": [
+        "javascript",
+        "typescript",
+        "javascriptreact",
+        "typescriptreact",
+        "json"
+    ],
+    "stylelint.validate": [
+        "css",
+        "scss",
+        "less"
+    ],
+    "css.validate": false,
+    "scss.validate": false,
+    "less.validate": false,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "all",
+    "prettier.printWidth": 80,
+    "prettier.semi": true
+}
