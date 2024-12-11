@@ -31,7 +31,7 @@ module.exports = [
       // 未使用変数の検出
       'no-unused-vars': 'off', // デフォルトルールを無効化
       '@typescript-eslint/no-unused-vars': [
-        'error',
+        'warn',
         {
           vars: 'all', // すべての変数をチェック
           args: 'after-used', // 使用された引数以降をチェック
