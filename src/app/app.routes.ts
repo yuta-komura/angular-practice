@@ -8,7 +8,7 @@ export const routes: Routes = [
     component: MainContentComponent,
     data: {
       title: 'メインコンテンツ',
-      description: 'Angularで楽しく開発',
+      description: 'Angularで開発',
     },
   },
   {
