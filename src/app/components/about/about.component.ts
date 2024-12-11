@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../services/models/user.model'; // Userモデルをインポート
+import { User } from '../../models/user.model'; // Userモデルをインポート
 import { UserService } from '../../services/user.service';
 
 @Component({
