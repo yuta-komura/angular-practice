@@ -1,59 +1,102 @@
-# AngularPractice
+# AngularPractice 
+このプロジェクトは [Angular CLI](https://github.com/angular/angular-cli)  バージョン 19.0.4 を使用して生成されました。
+## 開発サーバーの起動 
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
+ローカル開発サーバーを起動するには、以下のコマンドを実行します。
 
-## Development server
-
-To start a local development server, run:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+サーバーが起動したら、ブラウザで以下のURLにアクセスしてください。
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```arduino
+http://localhost:4200/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+ソースファイルを変更すると、アプリケーションは自動的にリロードされます。
+
+
+---
+
+
+## コードのスキャフォールディング 
+
+Angular CLIを使用すると、新しいコンポーネントやディレクティブ、パイプなどのコードを生成できます。
+
+### コンポーネントを生成する場合 
+
+
+```bash
+ng generate component コンポーネント名
+```
+`コンポーネント名` は作成したいコンポーネントの名前に置き換えてください。
+### 利用可能なスキャフォールディングの一覧 
+
+すべてのコマンドを確認するには、以下のコマンドを実行してください。
+
 
 ```bash
 ng generate --help
 ```
 
-## Building
 
-To build the project run:
+---
+
+
+## ビルド 
+
+プロジェクトをビルドするには、以下のコマンドを実行します。
+
 
 ```bash
 ng build
 ```
+ 
+- このコマンドは、プロジェクトをコンパイルし、`dist/` ディレクトリに出力します。
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- デフォルトでは、本番環境向けに最適化されたビルドが生成されます。
 
-## Running unit tests
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+---
+
+
+## ユニットテストの実行 
+
+ユニットテストを実行するには、以下のコマンドを使用します。
+
 
 ```bash
 ng test
 ```
+ 
+- **Karma**  テストランナーを使用してテストを実行します。
 
-## Running end-to-end tests
+- 結果はターミナルとブラウザに表示されます。
 
-For end-to-end (e2e) testing, run:
+
+---
+
+
+## エンドツーエンドテスト (e2e) 
+
+エンドツーエンドテストを実行するには、以下のコマンドを実行します。
+
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- 注意: Angular CLIはデフォルトでe2eテストのフレームワークを含んでいません。適切なツール（例: Cypress、Protractorなど）を選んで設定する必要があります。
 
-## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+
+## 追加リソース 
+
+Angular CLIの詳細なコマンドや使用方法については、公式ドキュメントを参照してください。
+ 
+- [Angular CLI 概要とコマンドリファレンス（日本語）]()  [ルーニーブック](https://runebook.dev/ja/docs/angular/cli?utm_source=chatgpt.com)
