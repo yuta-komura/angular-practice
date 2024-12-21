@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common'; // CommonModule をインポート
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './components/header/header.component'; // HeaderComponent をインポート
-import { UserService } from './services/user.service';
+import { UserService } from './application/user/user-application.service';
+import { User } from './application/user/user-view.model';
+import { HeaderComponent } from './presentation/components/header/header.component'; // HeaderComponent をインポート
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ import { UserService } from './services/user.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  users: string[] = [];
+  users: User[] = [];
 
   constructor(private userService: UserService) {}
 

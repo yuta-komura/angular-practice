@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../models/user.model'; // Userモデルをインポート
-import { UserService } from '../../services/user.service';
+import { User } from '../../../application/user/user-view.model'; // Userモデルをインポート
+import { UserService } from '../../../application/user/user-application.service';
 
 @Component({
   selector: 'app-about',
