@@ -1,8 +1,13 @@
 {
+  // 開発チームに推奨する拡張機能リスト
   "recommendations": [
-    "angular.ng-template",
-    "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint",
-    "stylelint.vscode-stylelint"
+    // Angular開発用の拡張機能
+    "angular.ng-template", // Angular用のシンタックスハイライト、スニペット、言語サービス
+    // コードフォーマッター
+    "esbenp.prettier-vscode", // Prettierを使ったコードフォーマット
+    // JavaScript/TypeScript用の静的解析
+    "dbaeumer.vscode-eslint", // ESLintでコードの品質チェック
+    // CSS/SCSS/LESSの静的解析
+    "stylelint.vscode-stylelint", // Stylelintでスタイルシートの品質チェック
   ]
 }
