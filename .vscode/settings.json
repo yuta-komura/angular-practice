@@ -1,17 +1,24 @@
 {
+    // デフォルトフォーマッターをPrettierに設定
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // 保存時にフォーマットを適用
     "editor.formatOnSave": true,
+    // 保存時にインポート整理や自動修正を実行
     "editor.codeActionsOnSave": {
-        "source.organizeImports": "always",
-        "source.fixAll.eslint": "always",
-        "source.fixAll.stylelint": "always"
+        "source.organizeImports": "always", // インポートを整理
+        "source.fixAll.eslint": "always", // ESLintで全体を修正
+        "source.fixAll.stylelint": "always" // Stylelintで全体を修正
     },
+    // プロジェクト内のPrettier、ESLint、Stylelintを使用
     "prettier.prettierPath": "./node_modules/prettier",
     "eslint.nodePath": "./node_modules",
     "stylelint.stylelintPath": "./node_modules/stylelint",
+    // 改行コードをLFに統一
     "files.eol": "\n",
+    // インポートモジュールを相対パスで指定
     "typescript.preferences.importModuleSpecifier": "relative",
     "javascript.preferences.importModuleSpecifier": "relative",
+    // ESLintの対象ファイルを指定
     "eslint.validate": [
         "javascript",
         "typescript",
@@ -19,16 +26,31 @@
         "typescriptreact",
         "json"
     ],
+    // Stylelintの対象ファイルを指定
     "stylelint.validate": [
         "css",
         "scss",
         "less"
     ],
+    // 標準のCSS/SCSS/LESS検証を無効化
     "css.validate": false,
     "scss.validate": false,
     "less.validate": false,
-    "prettier.singleQuote": true,
-    "prettier.trailingComma": "all",
-    "prettier.printWidth": 80,
-    "prettier.semi": true
+    // Prettierのオプション
+    "prettier.singleQuote": true, // シングルクォーテーションを使用
+    "prettier.trailingComma": "all", // 末尾カンマを付加
+    "prettier.printWidth": 80, // 1行の最大幅
+    "prettier.semi": true, // セミコロンを付加
+    // プロパティファイルのフォーマッター設定
+    "[properties]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    // JSON形式のファイルのフォーマッター設定 (追加例)
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // Markdownファイルのフォーマッター設定 (追加例)
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
