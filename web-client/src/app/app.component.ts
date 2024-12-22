@@ -7,7 +7,7 @@ import { HeaderComponent } from './presentation/components/header/header.compone
 
 @Component({
   selector: 'app-root',
-  standalone: true, // スタンドアロンを有効化
+  standalone: true,
   imports: [CommonModule, RouterOutlet, RouterLink, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],

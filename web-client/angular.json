@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-practice": {
+    "web-client": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-practice",
+            "outputPath": "dist/web-client",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -55,10 +55,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-practice:build:production"
+              "buildTarget": "web-client:build:production"
             },
             "development": {
-              "buildTarget": "angular-practice:build:development"
+              "buildTarget": "web-client:build:development"
             }
           },
           "defaultConfiguration": "development"

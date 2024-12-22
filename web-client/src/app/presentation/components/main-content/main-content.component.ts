@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-main-content',
-  standalone: true, // 必要なら追加
+  standalone: true,
   templateUrl: './main-content.component.html',
   styleUrls: ['./main-content.component.css'],
 })

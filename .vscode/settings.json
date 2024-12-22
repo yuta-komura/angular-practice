@@ -3,6 +3,9 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   // 保存時にフォーマットを適用
   "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 500,
+  "editor.formatOnSaveMode": "file",
   // 保存時にインポート整理や自動修正を実行
   "editor.codeActionsOnSave": {
     "source.organizeImports": "always", // インポートを整理
@@ -27,7 +30,11 @@
     "json"
   ],
   // Stylelintの対象ファイルを指定
-  "stylelint.validate": ["css", "scss", "less"],
+  "stylelint.validate": [
+    "css",
+    "scss",
+    "less"
+  ],
   // 標準のCSS/SCSS/LESS検証を無効化
   "css.validate": false,
   "scss.validate": false,
@@ -41,12 +48,5 @@
   "[properties]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
-  // JSON形式のファイルのフォーマッター設定 (追加例)
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  // Markdownファイルのフォーマッター設定 (追加例)
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  "makefile.configureOnOpen": false
 }
