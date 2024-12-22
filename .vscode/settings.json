@@ -2,9 +2,8 @@
   // デフォルトフォーマッターをPrettierに設定
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   // 保存時にフォーマットを適用
+  "files.autoSave": "onFocusChange",
   "editor.formatOnSave": true,
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 500,
   "editor.formatOnSaveMode": "file",
   // 保存時にインポート整理や自動修正を実行
   "editor.codeActionsOnSave": {
@@ -48,5 +47,4 @@
   "[properties]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
-  "makefile.configureOnOpen": false
 }

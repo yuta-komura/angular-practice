@@ -1,4 +1,9 @@
 {
+  "name": "angular-practice",
+  "private": true,
+  "workspaces": [
+    "web-client"
+  ],
   "dependencies": {
     "eslint": "^9.17.0",
     "prettier": "^3.4.2",
