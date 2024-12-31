@@ -6,7 +6,7 @@
       "request": "launch",
       "name": "Launch Chrome against localhost",
       "url": "http://localhost:4200", // AngularアプリのURL
-      "webRoot": "${workspaceFolder}", // プロジェクトのルートディレクトリ
+      "webRoot": "${workspaceFolder}/web-client", // プロジェクトのルートディレクトリ
       "sourceMaps": true, // ソースマップを有効化
       "trace": true // デバッグログを有効化
     },
@@ -15,7 +15,7 @@
       "request": "launch",
       "name": "Launch Edge against localhost",
       "url": "http://localhost:4200", // AngularアプリのURL
-      "webRoot": "${workspaceFolder}", // プロジェクトのルートディレクトリ
+      "webRoot": "${workspaceFolder}/web-client", // プロジェクトのルートディレクトリ
       "sourceMaps": true, // ソースマップを有効化
       "trace": true // デバッグログを有効化
     }
