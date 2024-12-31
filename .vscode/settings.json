@@ -10,10 +10,10 @@
     "source.fixAll.stylelint": "always"
   },
   "prettier.prettierPath": "./node_modules/prettier",
-  "prettier.configPath": "./config/prettier.config.js",
+  "prettier.configPath": "./prettier.config.js",
   "eslint.nodePath": "./node_modules",
   "eslint.options": {
-    "configFile": "./config/eslint.config.js"
+    "configFile": "./eslint.config.js"
   },
   "stylelint.stylelintPath": "./node_modules/stylelint",
   "files.eol": "\n",
@@ -35,4 +35,5 @@
   "css.validate": false,
   "scss.validate": false,
   "less.validate": false,
+  "makefile.configureOnOpen": false,
 }

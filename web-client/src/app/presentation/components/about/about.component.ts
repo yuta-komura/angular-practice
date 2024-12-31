@@ -12,24 +12,24 @@ import { DialogComponent } from '../../../presentation/shared/dialog/dialog.comp
   styleUrls: ['./about.component.css'],
 })
 export class AboutComponent implements OnInit {
-  users: User[] = []; // User型の配列
+  users: User[] = [];
   selectedUser: { id: number; name: string } | null = null;
   showDialog: boolean = false;
 
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    this.users = this.userService.getUsers(); // 初期データを取得
+    this.users = this.userService.getUsers();
   }
 
   addUser(name: string): void {
-    this.userService.addUser(name); // サービスで新しいユーザーを追加
-    this.users = this.userService.getUsers(); // データを再取得
+    this.userService.addUser(name);
+    this.users = this.userService.getUsers();
   }
 
   removeUser(index: number): void {
-    this.userService.removeUser(index); // サービスでユーザーを削除
-    this.users = this.userService.getUsers(); // データを再取得
+    this.userService.removeUser(index);
+    this.users = this.userService.getUsers();
   }
 
   onDeleteClick(user: { id: number; name: string }): void {
