@@ -1,24 +1,8 @@
-<h1>About Page</h1>
+<h2>About Page</h2>
 <p>以下はユーザー一覧です:</p>
 <ul>
-  <li *ngFor="let user of users; let i = index">
+  <li *ngFor="let user of users">
     {{ user.id }}: {{ user.name }}
-    <button (click)="onDeleteClick(user)" style="margin-left: 10px">×</button>
+    <button (click)="openDeleteDialog(user)">削除</button>
   </li>
 </ul>
-
-<!-- ダイアログ -->
-<app-dialog
-  *ngIf="showDialog"
-  [title]="'削除の確認'"
-  [message]="
-    selectedUser ? selectedUser.name + ' を削除してもよろしいですか？' : ''
-  "
-  [buttons]="getDialogButtons()"
-  (close)="showDialog = false"
-></app-dialog>
-
-<input #newUser type="text" placeholder="新しいユーザー名" />
-<button (click)="addUser(newUser.value); newUser.value = ''">
-  ユーザーを追加
-</button>

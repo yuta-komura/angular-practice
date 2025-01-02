@@ -1,19 +1,13 @@
-<div class="dialog-backdrop">
-  <div class="dialog">
-    <h2>{{ title }}</h2>
-    <p>{{ message }}</p>
-    <div class="dialog-buttons">
-      <button
-        *ngFor="let button of buttons"
-        [ngStyle]="{
-          backgroundColor: button.style || '#007bff',
-          color: '#fff',
-        }"
-        (click)="button.action()"
-      >
-        {{ button.label }}
-      </button>
-    </div>
-    <button class="dialog-close" (click)="onClose()">閉じる</button>
+<div class="dialog-container">
+  <h2>{{ data.title }}</h2>
+  <p>{{ data.message }}</p>
+  <div class="dialog-buttons">
+    <button
+      *ngFor="let button of data.buttons"
+      [ngStyle]="{ backgroundColor: button.style || '#ccc' }"
+      (click)="onButtonClick(button.action)"
+    >
+      {{ button.label }}
+    </button>
   </div>
 </div>

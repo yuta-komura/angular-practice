@@ -1,25 +1,31 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import {
+  MAT_DIALOG_DATA,
+  MatDialogModule,
+  MatDialogRef,
+} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dialog',
   standalone: true,
-  imports: [CommonModule],
   templateUrl: './dialog.component.html',
-  styleUrl: './dialog.component.css',
+  styleUrls: ['./dialog.component.css'],
+  imports: [CommonModule, MatDialogModule],
 })
 export class DialogComponent {
-  /** ダイアログのタイトル */
-  @Input() title: string = '';
-  /** ダイアログのメッセージ */
-  @Input() message: string = '';
-  /** ボタンリスト */
-  @Input() buttons: { label: string; action: () => void; style?: string }[] =
-    [];
-  /** ダイアログを閉じるイベント*/
-  @Output() close = new EventEmitter<void>();
+  constructor(
+    public dialogRef: MatDialogRef<DialogComponent>,
+    @Inject(MAT_DIALOG_DATA)
+    public data: {
+      title: string;
+      message: string;
+      buttons: { label: string; action: () => void; style?: string }[];
+    },
+  ) {}
 
-  onClose(): void {
-    this.close.emit();
+  onButtonClick(action: () => void): void {
+    action();
+    this.dialogRef.close();
   }
 }

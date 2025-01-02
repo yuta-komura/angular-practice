@@ -30,7 +30,6 @@
     "css",
     "scss",
     "less",
-    "html"
   ],
   "css.validate": false,
   "scss.validate": false,
