@@ -3,6 +3,7 @@
 <ul>
   <li *ngFor="let user of users">
     {{ user.id }}: {{ user.name }}
+    <button (click)="openDeleteDialog(user)">属性選択</button>
     <button (click)="openDeleteDialog(user)">削除</button>
   </li>
 </ul>
