@@ -15,7 +15,7 @@ cd angular-practice
 
 ### 2. Chocolatey のインストール(Windowsのみ)
 
-1. **Chocolatey のインストール**
+1. **Chocolatey のインストール**  
    管理者権限で PowerShell を開き、以下を実行します。
    ```powershell
    Set-ExecutionPolicy Bypass -Scope Process -Force; \
@@ -28,15 +28,15 @@ cd angular-practice
 
 #### Windows
 
-1. **nvm のインストール**
+1. **nvm のインストール**  
    管理者権限で PowerShell を開き、以下のコマンドを実行します。
 
    ```powershell
    choco install nvm
    ```
 
-2. **Node.js バージョンのインストールと適用**
-   プロジェクトルートにある .nvmrc ファイルを使用します。
+2. **Node.js バージョンのインストールと適用**  
+   プロジェクトルートにある .nvmrc ファイルを使用します。  
    管理者権限で PowerShell を開き、以下のコマンドを実行します。
 
    ```powershell
@@ -51,15 +51,15 @@ cd angular-practice
 
 #### macOS
 
-1. **nvm のインストール**
-   macOS では、`nvm` を公式スクリプトからインストールします。
+1. **nvm のインストール**  
+   macOS では、`nvm` を公式スクリプトからインストールします。  
    ターミナルで以下のコマンドを実行します。
 
    ```bash
    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
    ```
 
-2. **nvm を有効化**
+2. **nvm を有効化**  
    ターミナルの設定ファイルに以下を追加します（使用しているシェルによってファイルが異なります）。
 
    - **Bash** : `~/.bashrc`
@@ -76,8 +76,8 @@ cd angular-practice
    source ~/.bashrc # または ~/.zshrc
    ```
 
-3. **Node.js バージョンのインストールと適用**
-   プロジェクトルートにある `.nvmrc` ファイルを使用します。
+3. **Node.js バージョンのインストールと適用**  
+   プロジェクトルートにある `.nvmrc` ファイルを使用します。  
    以下のコマンドを実行します。
 
    ```bash
@@ -92,7 +92,7 @@ cd angular-practice
 
 ### 4. 依存関係のインストール
 
-1. **依存関係のインストール**
+1. **依存関係のインストール**  
    プロジェクトルートで以下のコマンドを実行します。
    ```
    npm install
@@ -137,7 +137,7 @@ cd angular-practice
 
 #### Windows
 
-1. **Docker のインストール**
+1. **Docker のインストール**  
    管理者権限で PowerShell を開き、以下のコマンドを実行します。
    ```powershell
    choco install docker-desktop
@@ -168,7 +168,7 @@ cd angular-practice
 
 #### 起動
 
-プロジェクトルートで以下のコマンドを実行します。
+プロジェクトルートで以下のコマンドを実行します。  
 Docker コンテナを起動し、プロジェクトを実行します。
 
 ```bash
