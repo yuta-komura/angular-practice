@@ -6,3 +6,8 @@
     <button (click)="openDeleteDialog(user)">削除</button>
   </li>
 </ul>
+
+<input #newUser type="text" placeholder="新しいユーザー名" />
+<button (click)="addUser(newUser.value); newUser.value = ''">
+  ユーザーを追加
+</button>
