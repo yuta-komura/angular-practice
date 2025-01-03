@@ -31,6 +31,14 @@ export class DialogComponent {
 
   onButtonClick(action: string): void {
     this.buttonClick.emit(action); // アクション名を親に送信
+    this.close();
+  }
+
+  onBackdropClick(event: MouseEvent): void {
     this.close(); // ダイアログを閉じる
+  }
+
+  preventClose(event: MouseEvent): void {
+    event.stopPropagation(); // 背景クリックでダイアログが閉じないようにする
   }
 }

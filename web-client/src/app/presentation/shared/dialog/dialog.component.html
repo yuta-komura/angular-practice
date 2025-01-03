@@ -1,5 +1,9 @@
-<div class="dialog-backdrop" *ngIf="isVisible">
-  <div class="dialog">
+<div
+  class="dialog-backdrop"
+  *ngIf="isVisible"
+  (click)="onBackdropClick($event)"
+>
+  <div class="dialog" (click)="preventClose($event)">
     <h3>{{ title }}</h3>
     <p>{{ message }}</p>
     <div class="dialog-buttons">
