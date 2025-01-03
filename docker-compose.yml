@@ -1,10 +1,10 @@
 services:
-  angular-app:
+  web-client:
     build:
       context: ./web-client
       dockerfile: Dockerfile
     ports:
-      - "4200:4200"
+      - '4200:4200'
     volumes:
       - ./web-client:/usr/src/app
       - /usr/src/app/node_modules
