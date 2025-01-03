@@ -1,13 +1,15 @@
-<div class="dialog-container">
-  <h2>{{ data.title }}</h2>
-  <p>{{ data.message }}</p>
-  <div class="dialog-buttons">
-    <button
-      *ngFor="let button of data.buttons"
-      [ngStyle]="{ backgroundColor: button.style || '#ccc' }"
-      (click)="onButtonClick(button.action)"
-    >
-      {{ button.label }}
-    </button>
+<div class="dialog-backdrop" *ngIf="isVisible">
+  <div class="dialog">
+    <h3>{{ title }}</h3>
+    <p>{{ message }}</p>
+    <div class="dialog-buttons">
+      <button
+        *ngFor="let button of buttons"
+        [ngClass]="button.class"
+        (click)="onButtonClick(button.action)"
+      >
+        {{ button.label }}
+      </button>
+    </div>
   </div>
 </div>

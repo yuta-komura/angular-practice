@@ -1,31 +1,36 @@
 import { CommonModule } from '@angular/common';
-import { Component, Inject } from '@angular/core';
-import {
-  MAT_DIALOG_DATA,
-  MatDialogModule,
-  MatDialogRef,
-} from '@angular/material/dialog';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
+export interface DialogButton {
+  label: string; // ボタンのラベル
+  action: string; // ボタンのアクション名
+  class?: string; // ボタンのCSSクラス（任意）
+}
 
 @Component({
   selector: 'app-dialog',
-  standalone: true,
   templateUrl: './dialog.component.html',
   styleUrls: ['./dialog.component.css'],
-  imports: [CommonModule, MatDialogModule],
+  imports: [CommonModule],
 })
 export class DialogComponent {
-  constructor(
-    public dialogRef: MatDialogRef<DialogComponent>,
-    @Inject(MAT_DIALOG_DATA)
-    public data: {
-      title: string;
-      message: string;
-      buttons: { label: string; action: () => void; style?: string }[];
-    },
-  ) {}
+  @Input() title: string = '確認'; // ダイアログのタイトル
+  @Input() message: string = 'この操作を実行しますか？'; // ダイアログのメッセージ
+  @Input() buttons: DialogButton[] = []; // ボタンリスト
+  @Output() buttonClick = new EventEmitter<string>(); // ボタンがクリックされたときのイベント
 
-  onButtonClick(action: () => void): void {
-    action();
-    this.dialogRef.close();
+  isVisible = false;
+
+  open(): void {
+    this.isVisible = true;
+  }
+
+  close(): void {
+    this.isVisible = false;
+  }
+
+  onButtonClick(action: string): void {
+    this.buttonClick.emit(action); // アクション名を親に送信
+    this.close(); // ダイアログを閉じる
   }
 }

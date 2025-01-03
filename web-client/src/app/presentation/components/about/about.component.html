@@ -12,3 +12,11 @@
 <button (click)="addUser(newUser.value); newUser.value = ''">
   ユーザーを追加
 </button>
+
+<app-dialog
+  #dialog
+  [title]="dialogTitle"
+  [message]="dialogMessage"
+  [buttons]="dialogButtons"
+  (buttonClick)="handleDialogAction($event)"
+></app-dialog>
