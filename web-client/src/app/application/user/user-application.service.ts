@@ -26,7 +26,11 @@ export class UserService {
   }
 
   // ユーザーを削除
-  removeUser(index: number): void {
-    this.users.splice(index, 1);
+  removeUser(id: number): void {
+    const targetIndexUser: number = this.users.findIndex(
+      (user) => user.id === id,
+    );
+    console.log('削除対象ユーザー', targetIndexUser);
+    this.users.splice(targetIndexUser, 1);
   }
 }
