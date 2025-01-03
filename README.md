@@ -93,6 +93,7 @@ cd angular-practice
 ### 4. 依存関係のインストール
 
 1. **依存関係のインストール**
+   プロジェクトルートで以下のコマンドを実行します。
    ```
    npm install
    ```
@@ -167,7 +168,8 @@ cd angular-practice
 
 #### 起動
 
-以下のコマンドで Docker コンテナを起動し、プロジェクトを実行します。
+プロジェクトルートで以下のコマンドを実行します。
+Docker コンテナを起動し、プロジェクトを実行します。
 
 ```bash
 make up
@@ -175,22 +177,24 @@ make up
 
 - `make up` は以下を実行するエイリアスです。
   ```bash
-  docker-compose up --build --remove-orphans
+  docker-compose up
   ```
 - 実行後、ブラウザで以下の URL にアクセスして動作確認を行います。
   - [http://localhost:4200/](http://localhost:4200/)
 
-#### 停止
+#### すべてのDockerキャッシュ、イメージ、コンテナ、ネットワーク、ボリュームを削除
 
 以下のコマンドで Docker コンテナを停止します。
 
 ```bash
-make down
+make clean
 ```
 
 - `make down` は以下を実行するエイリアスです。
+
   ```bash
-  docker-compose down --remove-orphans
+  docker-compose down --rmi all --volumes --remove-orphans
+  docker system prune -af --volumes
   ```
 
 ### テスト
