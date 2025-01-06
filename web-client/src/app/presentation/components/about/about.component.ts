@@ -25,7 +25,10 @@ export class AboutComponent {
 
   @ViewChild('dialog') dialog!: DialogComponent;
 
-  constructor(private userService: UserService) {}
+  constructor(
+    private userService: UserService,
+    private attributeService: AttributeService,
+  ) {}
 
   ngOnInit(): void {
     this.users = this.userService.getUsers();

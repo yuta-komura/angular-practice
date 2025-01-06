@@ -6,9 +6,9 @@ import { User } from './user-view.model'; // Userモデルをインポート
 })
 export class UserService {
   private users: User[] = [
-    { id: 1, name: 'Alice' },
-    { id: 2, name: 'Bob' },
-    { id: 3, name: 'Charlie' },
+    { id: 1, name: 'Alice', attribute: null },
+    { id: 2, name: 'Bob', attribute: null },
+    { id: 3, name: 'Charlie', attribute: null },
   ];
 
   // ユーザーリストを取得

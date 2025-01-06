@@ -1,0 +1,12 @@
+<div class="overlay" *ngIf="isOpen" (click)="closeMenu()"></div>
+<div class="menu-container" [class.open]="isOpen">
+  <div class="menu-header">
+    <h2>{{ title }}</h2>
+    <button class="close-button" (click)="closeMenu()">×</button>
+  </div>
+  <ul class="menu-options">
+    <li *ngFor="let option of options" (click)="onSelect(option)">
+      {{ option }}
+    </li>
+  </ul>
+</div>
