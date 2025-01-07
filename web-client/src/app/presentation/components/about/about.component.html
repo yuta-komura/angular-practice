@@ -3,8 +3,10 @@
 <ul>
   <li *ngFor="let user of users">
     {{ user.id }}: {{ user.name }}
-    <span *ngIf="user.attribute">[{{ user.attribute }}]</span>
-    <button mat-button (click)="openAttributeSelector(user)">属性を選択</button>
+    <span *ngFor="let attribute of user.attributes"
+      >[{{ attribute.value }}]</span
+    >
+    <button (click)="openAttributeSelector(user)">属性を選択</button>
     <button (click)="openDeleteDialog(user)">削除</button>
   </li>
 </ul>
@@ -21,3 +23,11 @@
   [buttons]="dialogButtons"
   (buttonClick)="handleDialogAction($event)"
 ></app-dialog>
+
+<app-selector
+  [title]="'属性を選択'"
+  [options]="attributes"
+  [isOpen]="isMenuOpen"
+  (close)="closeAttributeSelector()"
+  (select)="handleSelection($event)"
+></app-selector>

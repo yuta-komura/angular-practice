@@ -6,9 +6,9 @@ import { User } from './user-view.model'; // Userモデルをインポート
 })
 export class UserService {
   private users: User[] = [
-    { id: 1, name: 'Alice', attribute: null },
-    { id: 2, name: 'Bob', attribute: null },
-    { id: 3, name: 'Charlie', attribute: null },
+    { id: 1, name: 'Alice', attributes: [] },
+    { id: 2, name: 'Bob', attributes: [] },
+    { id: 3, name: 'Charlie', attributes: [] },
   ];
 
   // ユーザーリストを取得
@@ -21,6 +21,7 @@ export class UserService {
     const newUser: User = {
       id: this.users.length > 0 ? this.users[this.users.length - 1].id + 1 : 1,
       name: name,
+      attributes: [],
     };
     this.users.push(newUser);
   }
