@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Attribute } from './attribute-view.model';
+import { Attribute } from '../../domain/attribute/attribute.model';
 
 @Injectable({
   providedIn: 'root',

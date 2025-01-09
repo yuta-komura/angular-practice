@@ -1,4 +1,4 @@
-import { Attribute } from '../attribute/attribute-view.model';
+import { Attribute } from './attribute-view.model';
 
 export interface User {
   id: number; // 一意のID

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from './user-view.model'; // Userモデルをインポート
+import { User } from '../../domain/user/user.model'; // Userモデルをインポート
 
 @Injectable({
   providedIn: 'root',
@@ -28,10 +28,7 @@ export class UserService {
 
   // ユーザーを削除
   removeUser(id: number): void {
-    const targetIndexUser: number = this.users.findIndex(
-      (user) => user.id === id,
-    );
-    console.log('削除対象ユーザー', targetIndexUser);
-    this.users.splice(targetIndexUser, 1);
+    this.users = this.users.filter((user) => user.id !== id);
+    console.log(`User with ID ${id} deleted.`);
   }
 }

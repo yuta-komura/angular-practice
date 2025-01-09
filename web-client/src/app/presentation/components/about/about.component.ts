@@ -1,14 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
 import { AttributeService } from '../../../application/attribute/attribute-application.service';
-import { Attribute } from '../../../application/attribute/attribute-view.model';
 import { UserService } from '../../../application/user/user-application.service';
-import { User } from '../../../application/user/user-view.model';
 import {
   DialogButton,
   DialogComponent,
 } from '../../shared/dialog/dialog.component';
 import { SelectorComponent } from '../../shared/selector/selector.component';
+import { Attribute } from '../../view-models/attribute-view.model';
+import { User } from '../../view-models/user-view.model';
 
 @Component({
   selector: 'app-about',
@@ -41,8 +41,12 @@ export class AboutComponent {
   }
 
   addUser(name: string): void {
-    this.userService.addUser(name);
-    this.users = this.userService.getUsers();
+    const newUser: User = {
+      id: this.users.length > 0 ? this.users[this.users.length - 1].id + 1 : 1,
+      name: name,
+      attributes: [],
+    };
+    this.users.push(newUser);
   }
 
   openDeleteDialog(user: User): void {

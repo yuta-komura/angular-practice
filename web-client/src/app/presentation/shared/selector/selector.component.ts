@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Attribute } from '../../../application/attribute/attribute-view.model';
+import { Attribute } from '../../view-models/attribute-view.model';
 
 @Component({
   selector: 'app-selector',
@@ -14,6 +14,8 @@ export class SelectorComponent {
   @Input() isOpen: boolean = false; // メニューの開閉状態
   @Output() close = new EventEmitter<void>(); // メニューを閉じるイベント
   @Output() select = new EventEmitter<string>(); // 選択結果の通知
+
+  // TODO: ダイアログに合わせる
 
   onSelect(option: string): void {
     this.select.emit(option); // 選択結果を親コンポーネントに通知
